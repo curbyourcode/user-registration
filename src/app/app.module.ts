@@ -6,17 +6,24 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+
+import { AlertComponent } from './_directives';
+import { AuthGuard } from './_guards';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AlertComponent,
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
